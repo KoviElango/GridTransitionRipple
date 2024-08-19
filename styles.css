@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6200ea, #ec407a, #6200ea);
+    background-size: 200%;
+    animation: backgroundPan 10s linear infinite;
+}
+
+#tiles {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.tile {
+    background-color: #333;
+    border: 1px solid #222;
+    position: relative;
+    opacity: 1; /* Set initial opacity */
+    transition: background-color 0.3s ease;
+}
+
+.tile:hover {
+    background-color: #555;
+}
+
+@keyframes backgroundPan {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
