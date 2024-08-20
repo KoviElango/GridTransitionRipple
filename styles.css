@@ -4,9 +4,56 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#0c7bc5, #061777);
+    background: linear-gradient(#af890a, #ffa600,  #ff7b00);
     background-size: 200%;
     animation: backgroundPan 10s linear infinite;
+    overflow: hidden;
+    position: relative;
+}
+
+#background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: "Salsa", cursive; 
+    color: #000000; 
+    z-index: 1; 
+    opacity: 1;
+    transition: opacity 1s ease;
+    cursor: default;
+    pointer-events: none;
+}
+
+#overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: "Salsa", cursive; 
+    color: #ffffff; 
+    z-index: 3;
+    opacity: 1;
+    transition: opacity 1s ease;
+    cursor: default;
+    pointer-events: none;
+}
+
+.highlight-risk1 {
+    font-family: "Playwrite CU", cursive;
+    font-size: 60px;
+    color: #ff0000;
+    cursor: default;
+    pointer-events: none;
+}
+.highlight-risk2 {
+    font-family: "Playwrite CU", cursive;
+    font-size: 60px;
+    color: #ff0000;
+    cursor: default;
+    pointer-events: none;
 }
 
 #tiles {
@@ -14,13 +61,15 @@ body {
     width: 100vw;
     height: 100vh;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+    grid-gap: 1px; 
 }
 
 .tile {
     background-color: #333;
-    border: 1px solid #222;
     position: relative;
-    opacity: 1; /* Set initial opacity */
+    opacity: 1;
     transition: background-color 0.3s ease;
 }
 

@@ -1,8 +1,10 @@
 const tilesContainer = document.getElementById('tiles');
+const backgroundText = document.getElementById('background-text');
+const overlayText = document.getElementById('overlay-text');
 let columns, rows;
 let toggled = false;
 
-function createGrid(){
+function createGrid() {
     tilesContainer.innerHTML = '';
     const size = 100;
     columns = Math.floor(window.innerWidth / size);
@@ -11,7 +13,7 @@ function createGrid(){
     tilesContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
     tilesContainer.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 
-    for (let i = 0; i < columns * rows; i++){
+    for (let i = 0; i < columns * rows; i++) {
         const tile = document.createElement('div');
         tile.classList.add('tile');
         tile.setAttribute('data-index', i);
@@ -19,9 +21,16 @@ function createGrid(){
     }
 }
 
-function toggleTiles(){
+function toggleTiles() {
     toggled = !toggled;
-    document.body.classList.toggle('toggled');
+
+    if (toggled) {
+        overlayText.style.opacity = 0;
+        backgroundText.style.opacity = 1;
+    } else {
+        overlayText.style.opacity = 1;
+        backgroundText.style.opacity = 0;
+    }
 }
 
 function handleTileClick(event) {
