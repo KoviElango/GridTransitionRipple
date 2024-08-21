@@ -58,7 +58,7 @@ The grid is defined using CSS Grid. You can adjust the layout by modifying the f
 
 ## Credits
 
-- **Inspiration**: This project was inspired by the work of [Hyperplexed](https://www.hyperplexed.com/), whose creative web effects served as a reference for the tile grid and animations. Check out their [YouTube channel](https://www.youtube.com/c/Hyperplexed) for more awesome tutorials and projects.
+- **Inspiration**: This project was inspired by the work of [Hyperplexed]([https://www.hyperplexed.com/](https://www.youtube.com/watch?v=bAwEj_mSzOs)), whose creative web effects served as a reference for the tile grid and animations. Check out their [YouTube channel](https://www.youtube.com/c/Hyperplexed) for more awesome tutorials and projects.
 - **Animation Library**: The project uses [anime.js](https://animejs.com/), a powerful animation library that makes it easy to create complex animations.
 
 ## Contributions
